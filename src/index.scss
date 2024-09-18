@@ -1,0 +1,21 @@
+:root {
+  --main-font-color: #f2f2f2;
+  --sub-title-font-color: #f2f2f2e6;
+  --content-font-color: #f2f2f299;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 10rem 5rem;
+
+  & > div {
+    max-width: 1440px;
+    margin: 0 auto;
+    border: 1px solid white;
+  }
+}
