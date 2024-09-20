@@ -21,9 +21,23 @@
     gap: 0.5rem;
     background: #f2f2f20d;
     backdrop-filter: blur(15px);
+    position: relative;
+    margin-left: 4.6rem;
 
     & > .currentNav {
       background: rgba(52, 52, 52, 0.7);
+    }
+
+    & > .focusLight {
+      position: absolute;
+      top: -5px;
+      height: 3px;
+      width: 30px;
+      background-color: var(--main-font-color);
+      box-shadow: var(--main-font-color) 0 7px 25px 0;
+      transition: left 0.3s ease;
+      border-radius: 2px;
+      z-index: -1;
     }
   }
 
