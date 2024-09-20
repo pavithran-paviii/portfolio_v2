@@ -6,6 +6,7 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  z-index: 2;
 
   & > div {
     min-width: 200px;
@@ -37,26 +38,6 @@
         margin-top: 2.5px;
         text-shadow: 0 0 5px var(--content-font-color),
           0 0 5px var(--content-font-color);
-      }
-    }
-
-    & > .hiddenNav {
-      display: none;
-      position: absolute;
-      border: 1px solid var(--main-font-color);
-      height: 5rem;
-      width: 5rem;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      font-size: 3rem;
-      background: var(--main-font-color);
-      color: black;
-    }
-
-    &:hover {
-      & > .hiddenNav {
-        display: flex;
       }
     }
   }
