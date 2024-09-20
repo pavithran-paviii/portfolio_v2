@@ -11,6 +11,56 @@
     min-width: 200px;
   }
 
+  & > .logoDiv {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    & > img {
+      height: 4rem;
+    }
+
+    & > .info {
+      & > :nth-child(1) {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--main-font-color);
+        text-shadow: 0 0 5px var(--main-font-color),
+          0 0 5px var(--main-font-color);
+      }
+
+      & > :nth-child(2) {
+        font-size: 0.8rem;
+        color: var(--content-font-color);
+        margin-top: 2.5px;
+        text-shadow: 0 0 5px var(--content-font-color),
+          0 0 5px var(--content-font-color);
+      }
+    }
+
+    & > .hiddenNav {
+      display: none;
+      position: absolute;
+      border: 1px solid var(--main-font-color);
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      background: var(--main-font-color);
+      color: black;
+    }
+
+    &:hover {
+      & > .hiddenNav {
+        display: flex;
+      }
+    }
+  }
+
   & > .navigations {
     border: 1px solid #f2f2f21a;
     padding: 0.5rem;
@@ -69,5 +119,10 @@
     color: var(--main-font-color);
     background: #0000;
     transition: all linear 0.3s;
+
+    &:hover {
+      text-shadow: 0 0 5px var(--main-font-color),
+        0 0 5px var(--main-font-color);
+    }
   }
 }
