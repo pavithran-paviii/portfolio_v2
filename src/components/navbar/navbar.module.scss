@@ -20,12 +20,12 @@
     position: relative;
 
     & > img {
-      height: 4rem;
+      height: 3.5rem;
     }
 
     & > .info {
       & > :nth-child(1) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: var(--main-font-color);
         text-shadow: 0 0 5px var(--main-font-color),
@@ -33,7 +33,7 @@
       }
 
       & > :nth-child(2) {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: var(--content-font-color);
         margin-top: 2.5px;
         text-shadow: 0 0 5px var(--content-font-color),
@@ -53,7 +53,7 @@
     background: #f2f2f20d;
     backdrop-filter: blur(15px);
     position: relative;
-    margin-left: 4.6rem;
+    margin-left: 3rem;
 
     & > .currentNav {
       background: rgba(52, 52, 52, 0.7);
@@ -81,6 +81,7 @@
       align-items: center;
       gap: 0.2rem;
       padding: 0.75rem 1.5rem;
+      font-weight: 540;
 
       & > svg {
         font-size: 1.4rem;
@@ -93,9 +94,9 @@
   }
 
   a {
-    padding: 0.7rem 1.8rem;
+    padding: 0.6rem 1.8rem;
     border-radius: 35px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-decoration: none;
     color: var(--main-font-color);
     background: #0000;

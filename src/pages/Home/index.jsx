@@ -3,6 +3,7 @@ import classNames from "./home.module.scss";
 import { LuGithub } from "react-icons/lu";
 import { githubLink } from "../../assets/data";
 import { FaArrowDown } from "react-icons/fa6";
+import ProjectThumbnail from "../../components/projectThumbnail";
 
 const Home = () => {
   // is visible github
@@ -25,7 +26,7 @@ const Home = () => {
   return (
     <section className={classNames.home}>
       <div className={classNames.introduction}>
-        <div className={classNames.heroFade}></div>
+        <div className={classNames.topGlow}></div>
         <div
           className={classNames.innerSystem}
           onMouseEnter={handleMouseEnter}
@@ -42,7 +43,9 @@ const Home = () => {
           <div className={classNames.windowContent}>
             <div className={classNames.mainText}>
               I build things
-              <div>for web!!</div>
+              <div>
+                for <i>web</i>!!
+              </div>
             </div>
             <div className={classNames.currentExp}>
               <div>Developer at Nvest Campus.</div>
@@ -60,6 +63,16 @@ const Home = () => {
               <LuGithub />
             </a>
           )}
+        </div>
+        <div className={classNames.heroFade}></div>
+      </div>
+      <div className={classNames.projectsSection}>
+        <div className={classNames.title}>
+          <span className="whiteDot"></span>
+          Projects
+        </div>
+        <div className={classNames.allProjects}>
+          <ProjectThumbnail />
         </div>
       </div>
     </section>

@@ -16,6 +16,13 @@ section {
   & > div {
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid white;
   }
+}
+
+.whiteDot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff;
 }
