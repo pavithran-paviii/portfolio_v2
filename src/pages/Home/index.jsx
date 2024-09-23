@@ -25,6 +25,24 @@ const Home = () => {
 
   return (
     <section className={classNames.home}>
+      <div className={classNames.mobileIntroduction}>
+        <div className={classNames.title}>
+          <div className="whiteDot"></div>
+          <div>Pavithran — Developer</div>
+        </div>
+        <div className={classNames.mainText}>
+          I build things
+          <div>
+            for <i>web</i>!!
+          </div>
+        </div>
+        <div className={classNames.currentExp}>
+          <div>Developer at Nvest Campus.</div>
+          <div>Based in Hyderabad.</div>
+        </div>
+        <div className={classNames.heroFade}></div>
+      </div>
+
       <div className={classNames.introduction}>
         <div className={classNames.topGlow}></div>
         <div

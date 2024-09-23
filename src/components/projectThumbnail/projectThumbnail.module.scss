@@ -60,3 +60,17 @@
     }
   }
 }
+
+@media screen and (max-width: 786px) {
+  .projectThumbnail {
+    aspect-ratio: 1.4/1;
+
+    & > .innerContainer {
+      padding: 1.5rem;
+
+      & > img {
+        height: calc(100% - 4rem);
+      }
+    }
+  }
+}

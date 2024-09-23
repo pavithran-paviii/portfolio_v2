@@ -27,3 +27,9 @@ section {
   border-radius: 50%;
   box-shadow: 0 0 20px #fff;
 }
+
+@media screen and (max-width: 786px) {
+  html {
+    font-size: 10px;
+  }
+}

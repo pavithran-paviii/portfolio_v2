@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classNames from "./navbar.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
 import logo from "../../assets/images/logo.png";
-import { githubLink } from "../../assets/data";
+import { githubLink, linkedinLink, resumeLink } from "../../assets/data";
+import { MdAlternateEmail } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
+  const [mobileLinksOpen, setMobileLinksOpen] = useState(false);
   const location = useLocation();
   const focusLightRef = useRef(null);
 
@@ -50,12 +53,52 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={classNames.links}>
-        <a href="">
+        <a href={linkedinLink} target="_blank">
           LinkedIn <GoArrowUpRight />
         </a>
-        <a href="">
+        <a href={resumeLink} target="_blank">
           Resume <GoArrowUpRight />
         </a>
+      </div>
+      <div
+        className={classNames.linksMobile}
+        // style={{ overflow: mobileLinksOpen ? "" : "hidden" }}
+      >
+        <div onClick={() => setMobileLinksOpen((prev) => !prev)}>
+          <MdAlternateEmail
+            style={{
+              opacity: mobileLinksOpen ? 0 : "",
+              transform: mobileLinksOpen
+                ? "translate(-50%, -50%) rotate(360deg)"
+                : "",
+            }}
+          />
+          <IoClose
+            style={{
+              opacity: !mobileLinksOpen ? 0 : "",
+              transform: !mobileLinksOpen
+                ? "translate(-50%, -50%) rotate(360deg)"
+                : "",
+            }}
+          />
+        </div>
+        <div
+          className={classNames.linksDropdown}
+          style={{
+            top: mobileLinksOpen ? "" : "-50px",
+            right: mobileLinksOpen ? "" : "-50px",
+            height: mobileLinksOpen ? "" : "0",
+            width: mobileLinksOpen ? "" : "0",
+            opacity: mobileLinksOpen ? "" : "0",
+          }}
+        >
+          <a href={linkedinLink} target="_blank">
+            LinkedIn <GoArrowUpRight />
+          </a>
+          <a href={resumeLink} target="_blank">
+            Resume <GoArrowUpRight />
+          </a>
+        </div>
       </div>
     </div>
   );

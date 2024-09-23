@@ -9,6 +9,74 @@
     width: 100%;
   }
 
+  & > .mobileIntroduction {
+    display: none;
+    gap: 2.5rem;
+    flex-direction: column;
+    padding: 10rem 0 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+
+    & > .title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+    & > .mainText {
+      color: var(--main-font-color);
+      font-size: 5rem;
+      font-weight: 520;
+      text-shadow: 0 5px 10px #0057ff26, 0 -5px 10px #ff5a001a,
+        0 -5px 25px #ffffff4d;
+      text-align: left;
+      width: 100%;
+
+      & > svg {
+        font-size: 5rem;
+        margin-top: 1rem;
+      }
+
+      i {
+        position: relative;
+        transition: all linear 0.3s;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 2px;
+          transform: translate(-50%, 0%);
+          height: 2px;
+          background: var(--main-font-color);
+          animation: lineGrowShrink 1.5s alternate infinite;
+        }
+
+        @keyframes lineGrowShrink {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    & > .currentExp {
+      font-size: 1.8rem;
+      width: 100%;
+      text-align: left;
+      color: var(--main-font-color);
+
+      & > :nth-child(2) {
+        color: var(--content-font-color);
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
   & > .introduction {
     border-image: radial-gradient(
       circle farthest-side at 50% 0,
@@ -231,6 +299,24 @@
       flex-direction: column;
       gap: 3rem;
       margin-top: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .home {
+    padding: 0 15px;
+    padding-bottom: 3rem;
+
+    & > .introduction {
+      display: none;
+    }
+
+    & > .projectsSection {
+    }
+
+    & > .mobileIntroduction {
+      display: flex;
     }
   }
 }
